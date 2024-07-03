@@ -1,6 +1,6 @@
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm"
 
-@Entity('service')
+@Entity('services')
 export class Service extends BaseEntity {
     @PrimaryGeneratedColumn()
     id!: number
@@ -11,6 +11,10 @@ export class Service extends BaseEntity {
     
     @Column({name: 'description'})
     description!: string
+
+    @Column({name: 'created_at'})
+    created_at!: Date
+
 
 
 }
