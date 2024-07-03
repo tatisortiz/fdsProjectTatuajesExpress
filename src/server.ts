@@ -4,7 +4,7 @@ import {  getAllUsers, getUsers, updateusers} from './controllers/users.controll
 import { authLogin, authRegister } from './controllers/auth.controllers';
 import { appointActuCita, appointCreateCIta, appointPropCitas, appointRecupCitaById } from './controllers/appointments.controllers';
 import { AppDataSource } from './database/db';
-import { getAllService } from './controllers/service.controllers';
+import { createService, getAllService } from './controllers/service.controllers';
 
 
 const app = express()
@@ -44,6 +44,10 @@ app.get ('/api/appointments',appointPropCitas);
 ///SERVICIOS////
 
 app.get('/api/services',getAllService);
+
+app.post('/api/services',createService);
+
+
 
 
 
