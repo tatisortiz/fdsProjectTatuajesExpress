@@ -75,3 +75,81 @@ res.status(201).json(
   }
 
 }
+
+export const updateServiceById =  async (req: Request, res: Response) => {
+  try {
+     
+     const ServiceIdToUpdate = req.params.id
+     const bodyService = req.body
+  
+    const userUpdated = await Service.update (
+          {
+              id: parseInt(ServiceIdToUpdate)
+          },
+          bodyService
+      )
+       
+      /// responder 
+  
+      res.status(200).json(
+          {
+              success: true,
+              message: "service updated",
+              data: userUpdated
+          }
+      )
+      
+     
+    
+  } catch (error) {
+    res.status(500).json(
+        {
+            success: false,
+            message: "service cant be updated",
+            error : error
+
+        }
+    )
+    }
+    
+  }
+
+export const deleteSeerviceById = async (req: Request, res: Response) => {
+    try {
+        // 1 recuperar id
+   const serviceIdToDelete = Number(req.params.id)
+   // 2. eliminar registro de la bd
+
+  const serviceDeleted =await Service.delete(serviceIdToDelete)
+  
+  if(!serviceDeleted.affected){
+   return res.status(404).json(
+       {
+           success: false,
+           message: "service doesnt exist"
+       }
+   )
+  }
+
+  /// 3. responde 
+  res.status(200).json(
+   {
+       success: false,
+       message: "author deleting author",
+       data: serviceDeleted
+   }
+)
+
+    
+    } catch (error) {
+        res.status(500).json(
+            {
+                success: false,
+                message: "error deleting service",
+                error: error
+            }
+        )
+    
+        
+    }
+}
