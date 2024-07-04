@@ -28,6 +28,15 @@ app.delete('api/roles/',deleteRole);
 
 
 
+///SERVICIOS////
+
+app.get('/api/services',getAllService);
+app.post('/api/services',createService);
+app.put('/api/service/:id', updateServiceById);
+app.delete('/api/service/:id', deleteSeerviceById);
+
+
+
 /////USERS///////////
 app.get('/api/users', getUsers);
 
@@ -48,15 +57,7 @@ app.get('/api/appointments/id:', appointRecupCitaById);
 app.get ('/api/appointments',appointPropCitas);
 
 
-///SERVICIOS////
 
-app.get('/api/services',getAllService);
-
-app.post('/api/services',createService);
-
-app.put('/api/service/:id', updateServiceById);
-
-app.delete('/api/service/:id', deleteSeerviceById);
 
 
 
