@@ -43,7 +43,8 @@ export class Users1720113672611 implements MigrationInterface {
                     },
                     {
                         name: "role",
-                        type: "enum",
+                        type: "VARCHAR",
+                        length: "250",
                         default: "'user'"
 
                         
