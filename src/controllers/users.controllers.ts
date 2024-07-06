@@ -27,8 +27,11 @@ export const getAllUsers= async (req: Request, res: Response) =>{
 }
     
 export const getProfileUsers= (req: Request , res: Response) => {
-    res.send('ver perfil del usuario');
-
+ try {
+  
+ } catch (error) {
+  
+ }
 }
 
 export const updateusers= (req: Request , res: Response) => {
