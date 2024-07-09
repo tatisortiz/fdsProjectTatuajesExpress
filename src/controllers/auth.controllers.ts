@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 import { User } from '../database/models/User';
 import jwt from 'jsonwebtoken';
 
-export const authRegister = async (req: Request, res: Response) => {
+export const authRegister = async (req: Request, res: Response, ) => {
   try {
     // Recuperar la información
     const email = req.body.email;
@@ -105,6 +105,7 @@ export const authLogin = async (req: Request, res: Response) => {
     res.status(200).json({
       success: true,
       message: "User logged",
+      token: token
     });
 
    // o responder con error
