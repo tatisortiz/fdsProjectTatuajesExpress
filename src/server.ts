@@ -1,10 +1,12 @@
 import 'dotenv/config';
 import express from 'express';
-import {  getAllUsers, getProfileUsers, updateusers} from './controllers/users.controllers';
+import {  getAllUsers, getProfileUsers, updateUsers, updateusers} from './controllers/users.controllers';
 import { appointActuCita, appointCreateCIta, appointPropCitas, appointRecupCitaById } from './controllers/appointments.controllers';
 import { AppDataSource } from './database/db';
 import { createService, deleteSeerviceById, getAllService, updateServiceById } from './controllers/service.controllers';
 import { createRole, deleteRole, getAllRole, updateRole } from './controllers/role.controllers';
+import { authLogin, authRegister } from './controllers/auth.controllers';
+import { auth } from './middlewares/auth';
 
 
 const app = express()
@@ -15,16 +17,15 @@ const PORT = process.env.PORT || 4200
 
 
 ////////////Authentication///////
-//app.post('/api/auth/register', authRegister)
-
-//app.post('/api/auth/login', authLogin)
+app.post('/api/auth/register', authRegister);
+app.post('/api/auth/login', authLogin);
 
 
 ////////////ROLES//////////
 app.post('/api/roles', createRole);
-app.get('/api/roles',getAllRole);
-app.put('/api/roles',updateRole);
-app.delete('api/roles/',deleteRole);
+app.get('/api/roles',auth,getAllRole);
+app.put('/api/roles',auth, updateRole);
+app.delete('api/roles/',auth,deleteRole);
 
 
 
@@ -39,12 +40,10 @@ app.delete('/api/service/:id', deleteSeerviceById);
 
 /////USERS///////////
 app.get('/api/users', getAllUsers);
-
 app.get ('/api/users/profile',getProfileUsers);
-
-app.put ('/api/users/profile',updateusers);
-
-app.get ('')
+app.put ('/api/users/profile',updateUsers);
+app.delete ('/api/users/id:'deleteUser);
+app.put ('/api/users/id:/role', putUserRoles )
 
 ////// CITAS///////
 
