@@ -26,16 +26,71 @@ export const getAllUsers= async (req: Request, res: Response) =>{
   }
 }
     
-export const getProfileUsers= (req: Request , res: Response) => {
+export const getProfileUsers= async (req: Request , res: Response) => {
  try {
+
+  const userId = req.tokenData.id
+  const users = await User.findOne(
+    {
+      where: {
+        id:userId
+      }
+    }
+  )
+
   
- } catch (error) {
+   return res.status(201).json({
+    success: true,
+    message: "profile successfully recovered",
+    data: users
+  })
+
   
+ } catch (error : any ) {
+    res.status(500).json({
+      susscess: false,
+      message: "your profile can't be retrieved",
+      error: error.message
+    })
  }
 }
 
-export const updateUsers= (req: Request , res: Response) => {
-    res.send ('modificar datos del perfil');
+export const updateUsers= async(req: Request , res: Response) => {
+   try {
+    const userId = req.tokenData.id
+     const body = req.body;
+
+    if(!body) {
+      return res.status(404).json({
+      success: false,
+      message:"error update user",
+      })
+    }
+
+    const userUpdate = await User.update(
+      {
+        id:userId
+      },body
+    )
+     
+    res.status(201).json(
+      {
+        success: true,
+        message:"user update",
+        data: userUpdate
+      }
+    )
+    
+   
+    
+   } catch (error) {
+    res.status(500).json({
+      success:false,
+      message:"user cannot be modified",
+      error: error
+    })
+    
+   }
 }
 
 

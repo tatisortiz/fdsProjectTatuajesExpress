@@ -1,6 +1,6 @@
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm"
 
-@Entity('user')
+@Entity('users')
 export class User extends BaseEntity {
     @PrimaryGeneratedColumn()
     id!: number 
@@ -17,8 +17,8 @@ export class User extends BaseEntity {
     @Column({name:'is_active'})
     is_active!: boolean
 
-    @Column({name:'role'})
-    role!: string 
+    @Column({name:'role_Id'})
+    role_Id!: number
 
     @Column({name:'created_at'})
     created_at!: Date

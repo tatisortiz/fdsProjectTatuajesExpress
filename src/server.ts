@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import express from 'express';
-import {  getAllUsers, getProfileUsers, updateUsers, updateusers} from './controllers/users.controllers';
+import {  getAllUsers, getProfileUsers, updateUsers, } from './controllers/users.controllers';
 import { appointActuCita, appointCreateCIta, appointPropCitas, appointRecupCitaById } from './controllers/appointments.controllers';
 import { AppDataSource } from './database/db';
 import { createService, deleteSeerviceById, getAllService, updateServiceById } from './controllers/service.controllers';
@@ -40,10 +40,10 @@ app.delete('/api/service/:id', deleteSeerviceById);
 
 /////USERS///////////
 app.get('/api/users', getAllUsers);
-app.get ('/api/users/profile',getProfileUsers);
+app.get ('/api/users/profile',auth,getProfileUsers);
 app.put ('/api/users/profile',updateUsers);
-app.delete ('/api/users/id:'deleteUser);
-app.put ('/api/users/id:/role', putUserRoles )
+//app.delete ('/api/users/id:'deleteUser);
+//app.put ('/api/users/id:/role', putUserRoles )
 
 ////// CITAS///////
 
