@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { Appointments } from "../database/models/Appointments";
 
 
 export const appointCreateCita= async (req: Request , res: Response) => {
@@ -48,8 +49,44 @@ export const appointCreateCita= async (req: Request , res: Response) => {
 
 }
 
-export const updateAppoint= (req:Request , res: Response) => {
+export const updateAppoint= async(req:Request , res: Response) => {
    try {
+    const Id = req.params.id;
+        const body = req.body;
+
+        //2.actualizar en base de datos
+        const appointments = await Appointments.findOne(
+            {
+                where: {
+                    id: parseInt(Id)
+                }
+            }
+        )
+
+        if (!appointments) {
+            return res.status(404).json(
+                {
+                    success: false,
+                    message: "appointment  not exist"
+                }
+            )
+        }
+
+        const updatedAppointment = await Appointments.update(
+            {
+                id: parseInt(Id)
+            },
+            body
+        )
+
+        
+        res.status(200).json(
+            {
+                success: true,
+                message: "appointment updated",
+                data: updatedAppointment
+            }
+        )
     
    } catch (error) {
     res.status(500).json(

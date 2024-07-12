@@ -1,4 +1,6 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm"
+import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm"
+import { Role } from "./Role"
+import { Appointments } from "./Appointments"
 
 @Entity('users')
 export class User extends BaseEntity {
@@ -25,5 +27,12 @@ export class User extends BaseEntity {
 
     @Column({name: 'updated_at'})
     updated_at!: Date
+    
+    @ManyToOne (() => Role, (roles) => roles.users)
+    @JoinColumn ({ name: "role_id"})
+    roles!: Role;
+    
+    @OneToMany (() => Appointments, (appointments) => appointments.users)
+    appointments!: User[];
 
 }
