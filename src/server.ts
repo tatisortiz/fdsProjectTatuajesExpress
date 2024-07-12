@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import {  getAllUsers, getProfileUsers, updateUsers, } from './controllers/users.controllers';
-import { appointActuCita, appointCreateCIta, appointPropCitas, appointRecupCitaById } from './controllers/appointments.controllers';
+import { appointCreateCita, appointPropCitas, appointRecupCitaById, updateAppoint } from './controllers/appointments.controllers';
 import { AppDataSource } from './database/db';
 import { createService, deleteSeerviceById, getAllService, updateServiceById } from './controllers/service.controllers';
 import { createRole, deleteRole, getAllRole, updateRole } from './controllers/role.controllers';
@@ -47,9 +47,9 @@ app.put ('/api/users/profile',updateUsers);
 
 ////// CITAS///////
 
-app.post('/api/appointments', appointCreateCIta);
+app.post('/api/appointments', appointCreateCita);
 
-app.put('/api/appointments',appointActuCita);
+app.put('/api/appointments',updateAppoint);
 
 app.get('/api/appointments/id:', appointRecupCitaById);
 
