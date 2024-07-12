@@ -92,22 +92,103 @@ export const updateAppoint= async(req:Request , res: Response) => {
     res.status(500).json(
         {
             success: false,
-            message: "",
+            message: "appointment cant be updated",
             error : error
         }
     )
    }
 }
 
-export const appointRecupCitaById=(req: Request, res: Response) => {
-    console.log(req.params.id);
+export const getAllAppointById= async(req: Request, res: Response) => {
+   try {
+    const Id = req.params.id;
+        const userId = req.tokenData.id;
 
-    res.json({
-        success: true,
-        message: `recuperar cita with id ${req.params.id}`
-    })
+       // 1. recuperar Id de la base de datos
+        const appointments = await Appointments.findOne(
+            {
+                where: {
+                    users: { id: userId },
+                    id: parseInt(Id)
+                },
+                relations: { services: {} }
+            }
+        )
+
+        if (!Id) {
+            return res.status(404).json(
+                {
+                    success: false,
+                    message: "appointment  not exist"
+                }
+            )
+        }
+
+        res.json(
+            {
+                success: true,
+                message: "appointment retrived",
+                data: appointments
+            }
+        )
+
+    
+   } catch (error) {
+    res.status(500).json(
+        {
+            success: false,
+            message:"Error retrieving appointment",
+            error: error 
+        }
+    )
+    
+   }
 }
 
-export const appointPropCitas= (req:Request , res: Response) => {
-    res.send('ver mis propias citas')
+export const getAppointment= async(req:Request , res: Response) => {
+ try {
+    const userId = req.tokenData.id;
+
+    const appointments = await Appointments.find(
+        {
+            select: {
+                id: true,
+                date: true,
+                users: {
+                    id: true,
+                    email: true
+                },
+                services: {
+                    id: true,
+                    title: true
+                },
+            },
+            where:
+            {
+                user_id: userId
+            },
+
+            relations: { users: {}, services: {} }
+        }
+    );
+
+    res.status(200).json(
+        {
+            success: true,
+            message: "appointment retrived successfully",
+            data: appointments
+        }
+    )
+
+    
+ } catch (error) {
+    res.status(500).json(
+        {
+            success: false,
+            message:"Error retrieving appointment",
+            error: error
+        }
+    )
+    
+ }
 }

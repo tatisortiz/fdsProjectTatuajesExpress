@@ -3,7 +3,14 @@ import { User } from "../database/models/User";
 
 export const getAllUsers= async (req: Request, res: Response) =>{
   try {
-    const user = await User.find()
+    
+    const user = await User.find(
+      {
+        select: {
+            email: true,
+        }
+    }
+    )
 
     res.json(
       {
@@ -32,6 +39,11 @@ export const getProfileUsers= async (req: Request , res: Response) => {
   const userId = req.tokenData.id
   const users = await User.findOne(
     {
+      select: {
+          email: true,
+          created_at: true,
+      },
+    
       where: {
         id:userId
       }
