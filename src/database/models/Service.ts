@@ -1,4 +1,5 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm"
+import { BaseEntity, Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm"
+import { Appointments } from "./Appointments"
 
 @Entity('services')
 export class Service extends BaseEntity {
@@ -14,7 +15,9 @@ export class Service extends BaseEntity {
 
     @Column({name: 'created_at'})
     created_at!: Date
-
+    
+    @OneToMany(() => Appointments, (appointments) => appointments.services)
+    appointments!: Service[]
 
 
 }

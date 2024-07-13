@@ -38,14 +38,13 @@ export class Users1720113672611 implements MigrationInterface {
                         name: "is_active",
                         type: "boolean",
                         default: true,
-                        isNullable: false
+                       
                         
                     },
                     {
-                        name: "role",
-                        type: "VARCHAR",
-                        length: "250",
-                        default: "'user'"
+                        name: "role_Id",
+                        type: "int",
+                        default: "1"
 
                         
                     },
@@ -64,7 +63,12 @@ export class Users1720113672611 implements MigrationInterface {
                     },
 
             
-                ],
+                ], foreignKeys: [{
+                    columnNames: ['role_Id'],
+                    referencedTableName: 'roles',
+                    referencedColumnNames:['id']
+                    
+                }]
             }),
             true
         );

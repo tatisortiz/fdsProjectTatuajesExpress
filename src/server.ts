@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
-import {  getAllUsers, getProfileUsers, updateUsers, updateusers} from './controllers/users.controllers';
-import { appointActuCita, appointCreateCIta, appointPropCitas, appointRecupCitaById } from './controllers/appointments.controllers';
+import {  getAllUsers, getProfileUsers, updateUsers, } from './controllers/users.controllers';
+import { appointCreateCita,  getAllAppointById, getAppointment, updateAppoint } from './controllers/appointments.controllers';
 import { AppDataSource } from './database/db';
 import { createService, deleteSeerviceById, getAllService, updateServiceById } from './controllers/service.controllers';
 import { createRole, deleteRole, getAllRole, updateRole } from './controllers/role.controllers';
@@ -40,20 +40,20 @@ app.delete('/api/service/:id', deleteSeerviceById);
 
 /////USERS///////////
 app.get('/api/users', getAllUsers);
-app.get ('/api/users/profile',getProfileUsers);
+app.get ('/api/users/profile',auth,getProfileUsers);
 app.put ('/api/users/profile',updateUsers);
-app.delete ('/api/users/id:'deleteUser);
-app.put ('/api/users/id:/role', putUserRoles )
+//app.delete ('/api/users/id:'deleteUser);
+//app.put ('/api/users/id:/role', putUserRoles )
 
 ////// CITAS///////
 
-app.post('/api/appointments', appointCreateCIta);
+app.post('/api/appointments', appointCreateCita);
 
-app.put('/api/appointments',appointActuCita);
+app.put('/api/appointments',updateAppoint);
 
-app.get('/api/appointments/id:', appointRecupCitaById);
+app.get('/api/appointments/id:',getAllAppointById);
 
-app.get ('/api/appointments',appointPropCitas);
+app.get ('/api/appointments',getAppointment);
 
 
 

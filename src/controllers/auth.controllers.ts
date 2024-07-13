@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 import { User } from '../database/models/User';
 import jwt from 'jsonwebtoken';
 
-export const authRegister = async (req: Request, res: Response, ) => {
+export const authRegister = async (req: Request, res: Response,) => {
   try {
     // Recuperar la información
     const email = req.body.email;
@@ -32,14 +32,16 @@ export const authRegister = async (req: Request, res: Response, ) => {
     const newUser = await User.create({
       email: email,
       password: hashedPassword,
-    });
+    }).save()
 
     // Responder
     res.status(201).json({
       success: true,
-      message: "User registered",
+      message: "tatiaan la mejor",
       data: newUser,
     });
+
+    console.log('ttauiuus')
 
   } catch (error) {
     res.status(500).json({
@@ -86,20 +88,20 @@ export const authLogin = async (req: Request, res: Response) => {
     }
 
     // creacion del token
-   const token = jwt.sign(
-    {
-     id: user.id,
-     role: user.role,
-     email:user.email
-    },
+    const token = jwt.sign(
+      {
+        id: user.id,
+        role: user.role_Id,
+        email: user.email
+      },
 
-    process.env.JWt_SECRET as string,
-    {
-        expiresIn:"2h"
-    }
-    
+      process.env.JWt_SECRET as string,
+      {
+        expiresIn: "2h"
+      }
 
-)
+
+    )
 
     // Responder con éxito
     res.status(200).json({
@@ -108,7 +110,7 @@ export const authLogin = async (req: Request, res: Response) => {
       token: token
     });
 
-   // o responder con error
+    // o responder con error
 
   } catch (error) {
     res.status(500).json({
