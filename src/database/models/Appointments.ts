@@ -10,6 +10,9 @@ export class Appointments extends BaseEntity {
     @Column({name: 'date'})
     date!: Date
 
+    @Column({ name: "appointment_date"})
+    appointment_date!: Date
+
     @Column({ name: 'user_id'})
     user_id!: number
 
