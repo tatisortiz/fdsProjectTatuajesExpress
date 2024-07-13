@@ -42,7 +42,7 @@ export class Users1720113672611 implements MigrationInterface {
                         
                     },
                     {
-                        name: "role_Id",
+                        name: "role_id",
                         type: "int",
                         default: "1"
 
@@ -64,7 +64,7 @@ export class Users1720113672611 implements MigrationInterface {
 
             
                 ], foreignKeys: [{
-                    columnNames: ['role_Id'],
+                    columnNames: ['role_id'],
                     referencedTableName: 'roles',
                     referencedColumnNames:['id']
                     
