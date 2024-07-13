@@ -29,10 +29,10 @@ export const usersSeeder = async () => {
 
 
         const userOne = new User();
-        userOne .id = 4;
-        userOne .email = "userone@userone.com";
-        userOne .password = bcrypt.hashSync("123456789", 10);
-        userOne .role_Id = 2
+        userOne.id = 4;
+        userOne.email = "userone@userone.com";
+        userOne.password = bcrypt.hashSync("123456789", 10);
+        userOne.role_Id = 2
         await  userOne .save();
 
 
@@ -52,7 +52,7 @@ export const usersSeeder = async () => {
 
     } catch (error: any) {
         console.error("==========================");
-        console.error('ERROR USER SEEDER', error.message);
+        console.error('ERROR USER SEEDER');
         console.error("==========================");
 
     } finally {
