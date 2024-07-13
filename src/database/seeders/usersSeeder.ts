@@ -5,7 +5,7 @@ import { User } from '../models/User';
 export const usersSeeder = async () => {
     try {
         await AppDataSource.initialize();
-        console.log(23455);
+        
 
         const user = new User();
         user.id = 1;
@@ -13,9 +13,9 @@ export const usersSeeder = async () => {
         user.email = "user@user.com";
         user.password = bcrypt.hashSync("123456789", 10);
         user.role_Id = 2;
-        await user.save();  // Usando directamente el método save()
+        await user.save();  
 
-        console.log(8233);
+        
 
         const adminUser = new User();
         adminUser.id = 2;
@@ -23,31 +23,31 @@ export const usersSeeder = async () => {
         adminUser.email = "admin@admin.com";
         adminUser.password = bcrypt.hashSync("123456789", 10);
         adminUser.role_Id = 2;
-        await adminUser.save();  // Usando directamente el método save()
-        console.log(3)
+        await adminUser.save();  
+        
         const superAdminn = new User();
         superAdminn.id = 3;
         superAdminn.name = "lina";
         superAdminn.email = "superadmin@superadmin.com";
         superAdminn.password = bcrypt.hashSync("123456789", 10);
         superAdminn.role_Id= 3;
-        await superAdminn.save();  // Usando directamente el método save()
-        console.log(4)
+        await superAdminn.save();  
+        
         const userOne = new User();
         userOne.id = 4;
         userOne.name = "jose";
         userOne.email = "userone@userone.com";
         userOne.password = bcrypt.hashSync("123456789", 10);
         userOne.role_Id = 2;
-        await userOne.save();  // Usando directamente el método save()
-        console.log(6)
+        await userOne.save();  
+        
         const userTatto = new User();
         userTatto.id = 5;
         userTatto.name = "jeferson";
         userTatto.email = "usertatto@usertatto.com";
         userTatto.password = bcrypt.hashSync("123456789", 10);
         userTatto.role_Id = 1;
-        await userTatto.save();  // Usando directamente el método save()
+        await userTatto.save();  
 
         console.log("==========================");
         console.log("Users seeder successfully");
