@@ -153,7 +153,6 @@ export const getAppointment= async(req:Request , res: Response) => {
         {
             select: {
                 id: true,
-                date: true,
                 users: {
                     id: true,
                     email: true

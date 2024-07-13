@@ -7,6 +7,8 @@ import { createService, deleteSeerviceById, getAllService, updateServiceById } f
 import { createRole, deleteRole, getAllRole, updateRole } from './controllers/role.controllers';
 import { authLogin, authRegister } from './controllers/auth.controllers';
 import { auth } from './middlewares/auth';
+import { isAdmin } from './middlewares/isAdmin';
+import { isSuperAdmin } from './middlewares/isSuperAdmin'; 
 
 
 const app = express()
@@ -22,38 +24,33 @@ app.post('/api/auth/login', authLogin);
 
 
 ////////////ROLES//////////
-app.post('/api/roles', createRole);
-app.get('/api/roles',auth,getAllRole);
-app.put('/api/roles',auth, updateRole);
-app.delete('api/roles/',auth,deleteRole);
+app.post('/api/roles',auth,isAdmin, createRole);
+app.get('/api/roles',auth, isAdmin, getAllRole);//
+app.put('/api/roles',auth, isAdmin, updateRole);
+app.delete('api/roles/',auth, isSuperAdmin ,deleteRole);
 
 
 
 ///SERVICIOS////
 
 app.get('/api/services',getAllService);
-app.post('/api/services',createService);
+app.post('/api/services', auth, isSuperAdmin,createService);
 app.put('/api/service/:id', updateServiceById);
 app.delete('/api/service/:id', deleteSeerviceById);
 
 
 
-/////USERS///////////
-app.get('/api/users', getAllUsers);
-app.get ('/api/users/profile',auth,getProfileUsers);
-app.put ('/api/users/profile',updateUsers);
-//app.delete ('/api/users/id:'deleteUser);
-//app.put ('/api/users/id:/role', putUserRoles )
+
 
 ////// CITAS///////
 
-app.post('/api/appointments', appointCreateCita);
+app.post('/api/appointments',auth, appointCreateCita);
 
-app.put('/api/appointments',updateAppoint);
+app.put('/api/appointments',auth,updateAppoint);
 
-app.get('/api/appointments/id:',getAllAppointById);
+app.get('/api/appointments/id:',auth, isAdmin,getAllAppointById);
 
-app.get ('/api/appointments',getAppointment);
+app.get ('/api/appointments',auth, isAdmin,getAppointment);
 
 
 
