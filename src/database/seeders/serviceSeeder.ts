@@ -26,17 +26,17 @@ export const servicesSeeder = async () => {
         const service4 = new Service();
         service4.id = 4;
         service4.title = "Placement of piercings and dilators.";
-        service4.description = "We offer professional services for the placement of piercings and dilators. Our team ensures safe procedures and varied styles to meet our clients' individual preferences..";
+        service4.description = "We offer professional services for the placement of piercings and dilators. Our team ensures safe procedures and varied styles to meet our clients' individual preferences.";
         await service4.save();
 
         const service5 = new Service();
         service5.id = 5;
-        service5.title = "Venta de piercings y otros artículos";
-        service5.description = "Además de nuestros servicios de aplicación, ofrecemos una selección de piercings y otros artículos relacionados con el arte corporal. Los clientes pueden adquirir productos de calidad para complementar su estilo único.";
+        service5.title = "Sale of piercings and other items";
+        service5.description = "In addition to our application services, we offer a selection of piercings and other body art related items. Customers can purchase quality products to complement their unique style.";
         await service5.save();
 
         console.log("==========================");
-        console.log("Services seeder successfully");
+        console.log("Services Seeder Successfully");
         console.log("==========================");
 
     } catch (error: any) {
