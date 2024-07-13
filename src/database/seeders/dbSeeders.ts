@@ -1,6 +1,6 @@
 import { appointmentsSeeder } from "./appointmentsSeeder";
 import { rolesSeeder } from "./rolesSeeder";
-import { servicesSeeder } from "./serviceSeeder"; 
+import { servicesSeeder } from "./servicesSeeder"; 
 import { usersSeeder } from "./usersSeeder";
 
 (async () => {

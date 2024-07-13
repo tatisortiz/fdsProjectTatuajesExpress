@@ -16,11 +16,11 @@ export class User extends BaseEntity {
     @Column ({name: 'password'})
     password!: string
 
-    @Column({name:'is_active'})
-    is_active!: boolean
-
     @Column({name:'role_Id'})
     role_Id!: number
+
+    @Column({name:'is_active'})
+    is_active!: boolean
 
     @Column({name:'created_at'})
     created_at!: Date
