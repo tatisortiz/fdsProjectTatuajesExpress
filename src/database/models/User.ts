@@ -16,17 +16,17 @@ export class User extends BaseEntity {
     @Column ({name: 'password'})
     password!: string
 
-    @Column({name:'role_Id'})
+    @Column({name:'role_id'})
     role_Id!: number
 
-    @Column({name:'is_active'})
-    is_active!: boolean
+    //@Column({name:'is_active'})
+    //is_active!: boolean
 
-    @Column({name:'created_at'})
-    created_at!: Date
+   // @Column({name:'created_at'})
+    //created_at!: Date
 
-    @Column({name: 'updated_at'})
-    updated_at!: Date
+    //@Column({name: 'updated_at'})
+    //updated_at!: Date
     
     @ManyToOne (() => Role, (roles) => roles.users)
     @JoinColumn ({ name: "role_id"})

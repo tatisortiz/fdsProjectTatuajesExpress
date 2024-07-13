@@ -2,16 +2,16 @@ import { BaseEntity, Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColu
 import { User } from "./User"
 import { Service } from "./Service"
 
-@Entity('Appointments')
+@Entity('appointments')
 export class Appointments extends BaseEntity {
     @PrimaryGeneratedColumn()
     id!: number
 
-    @Column({name: 'date'})
-    date!: Date
+    // @Column({name: 'date'})
+    // date!: Date
 
-    @Column({ name: "appointment_date"})
-    appointment_date!: Date
+     @Column({ name: "appointment_date"})
+     appointment_date!: Date
 
     @Column({ name: 'user_id'})
     user_id!: number
@@ -27,4 +27,3 @@ export class Appointments extends BaseEntity {
     @JoinColumn({name: "service_id"})
     services!: Service
 }
-
