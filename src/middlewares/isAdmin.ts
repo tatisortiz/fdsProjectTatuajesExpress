@@ -2,7 +2,8 @@ import { NextFunction,Request, Response } from "express";
 
 export const isAdmin= (req: Request, res: Response, next:NextFunction) => {
     try {
-        if(req.tokenData.role !== "admin") {
+        console.log(req.tokenData.role_id)
+        if(req.tokenData.role_id!== 2) {
             return res.status(403).json(
                 {
                     success: false,

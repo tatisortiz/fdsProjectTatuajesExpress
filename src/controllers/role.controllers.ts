@@ -40,7 +40,7 @@ export const getAllRole = async (req: Request, res: Response) => {
         res.json(
             {
                 success: true,
-                message: "all book retrieve successfully",
+                message: "all roles retrieve successfully",
                 data: roles
             }
         )
@@ -69,7 +69,7 @@ export const updateRole = async (req : Request, res: Response) => {
         },
         body
        )
-
+        
        res.status(200).json(
         {
             success: true,
