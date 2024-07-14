@@ -3,8 +3,8 @@ import express from 'express';
 import {  getAllUsers, getProfileUsers, updateUsers, } from './controllers/users.controllers';
 import {  appointCreateCita, getAllAppointById, getAppointment, updateAppoint } from './controllers/appointments.controllers';
 import { AppDataSource } from './database/db';
-import { createService, deleteSeerviceById, getAllService, updateServiceById } from './controllers/service.controllers';
-import { createRole, deleteRole, getAllRole, updateRole } from './controllers/role.controllers';
+import { createService, getAllService } from './controllers/service.controllers';
+import { createRole, getAllRole,} from './controllers/role.controllers';
 import { authLogin, authRegister } from './controllers/auth.controllers';
 import { auth } from './middlewares/auth';
 import { isAdmin } from './middlewares/isAdmin';
@@ -26,8 +26,7 @@ app.post('/api/auth/login', authLogin);
 ////////////ROLES//////////
 app.post('/api/roles',auth,isAdmin, createRole);
 app.get('/api/roles',auth, isAdmin, getAllRole);
-app.put('/api/roles',auth, isAdmin, updateRole);//
-app.delete('/api/roles',auth, isAdmin ,deleteRole);//
+
 
 
 /////////Users////////////////777
@@ -40,9 +39,8 @@ app.put("/api/users/profile", auth, updateUsers);
 ///SERVICIOS////
 
 app.get('/api/services',getAllService);
-app.post('/api/services', auth, isSuperAdmin,createService);
-app.put('/api/service/:id',auth,isSuperAdmin, updateServiceById);//
-app.delete('/api/service/:id',auth,isSuperAdmin, deleteSeerviceById);///
+app.post('/api/services', auth, isAdmin,createService);
+
 
 
 

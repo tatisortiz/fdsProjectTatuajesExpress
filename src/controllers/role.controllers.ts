@@ -57,69 +57,6 @@ export const getAllRole = async (req: Request, res: Response) => {
     }
 }
 
-export const updateRole = async (req : Request, res: Response) => {
-    try {
-    
-       const roleId = req.params.id
-       const body = req.body
 
-       const roleUpDate = await Role.update (
-        {
-            id: parseInt(roleId)
-        },
-        body
-       )
-        
-       res.status(200).json(
-        {
-            success: true,
-            message: "role update",
-            data : roleUpDate
-        }
-       )
-        
-    } catch (error) {
-        res.status(500).json(
-            {
-                success: false,
-                message: " role error",
-                error: error
-            }
-        )
-        
-    }
-}
 
-export const deleteRole = async (req: Request, res: Response) => {
-    try {
-     const roleIdDelete = Number (req.params.id)
 
-     const roleDelete = await Role.delete(roleIdDelete)
-
-     if(!roleDelete.affected){
-        return res.status(404).json(
-            {
-                success: false,
-                message: "role doesnt exist"
-            }
-        )
-     }
-     res.status(200).json(
-        {
-            success: true,
-            message: "role removed",
-            data: roleDelete
-        }
-     )
-        
-    } catch (error) {
-        res.status(500).json(
-            {
-                success: false,
-                message: "role deleted",
-                error: error
-            }
-        )
-        
-    }
-}

@@ -12,7 +12,7 @@ export const appointCreateCita= async (req: Request , res: Response) => {
         return res.status(404).json(
             {
                 success: false,
-                message: "you must enter date and service" // se requiere la fecha y el servicio
+                message: "you must enter date and service" 
             }
         )
     }

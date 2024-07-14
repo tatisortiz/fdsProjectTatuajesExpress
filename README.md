@@ -10,7 +10,6 @@
 - [Stack](#stack)
 - [Endpoints ⚙️](#endpoints-⚙️)
 - [Future Functionalities 👨🏻‍💻](#future-functionalities-👨🏻‍💻)
-- [Development 🌐](#development-🌐)
 -  [Deploy 🚀](#deploy-🚀)
 - [Author ✒️](#author-✒️)
 - [Thanks 🎓](#thanks-🎓)
@@ -159,8 +158,9 @@ Tecnologías utilizadas para el proyecto:
           body:
           ``` js
               {
-                  "appointment_date": "2024/05/01",
-                  "service_id": "3"
+                  "user_id": 6,
+                  "appointment_date": "2024-01-17",
+                  "service_id": 6
               }
           ```
 
@@ -310,43 +310,7 @@ Tecnologías utilizadas para el proyecto:
             }
         ```
 
-    - UPDATE ROLE (isadmin)
-
-            PUT http://localhost:4000/api/roles/update/:id
-
-      auth:
-
-      ```
-      your token
-      ```
-
-      body:
-
-      ```js
-          {
-              "id": 2,
-              "infupdate": "blablabla"
-          }
-      ```
-
-    - DELETE ROLE (isAdmin)
-
-           DELETE http://localhost:4000/api/roles/delete
-
-      auth:
-
-      ```
-      your token
-      ```
-
-      body:
-
-      ```js
-          {
-              "name": superAdmin
-          }
-      ```
-
+ 
   </details>
  
 
@@ -354,7 +318,6 @@ Tecnologías utilizadas para el proyecto:
 - option to select a tattoo artist.
 - Add tattoo artist table.
 
-## Development 🌐
 
  ## Deploy 🚀
 Deploy via Zeabur: [https://tattoexpressfd.zeabur.app/](https://tattoexpressfd.zeabur.app/) <br>
