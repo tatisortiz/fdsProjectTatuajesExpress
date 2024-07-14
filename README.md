@@ -166,7 +166,7 @@ Tecnologías utilizadas para el proyecto:
 
       - UPDATE USER APPOINTMENT
 
-              PUT http://localhost:4000/api/appointments
+              PUT http://localhost:4000/api/appointments/:id
 
           auth:
           ```
@@ -176,8 +176,9 @@ Tecnologías utilizadas para el proyecto:
           ``` js
               {
                 
-                  "id": 2,
-                 "appointment_date": "(fecha new cita)"
+                  "appointment_date": "2024-10-17",
+                  "service_id": 6
+   
                   
               }
           ```

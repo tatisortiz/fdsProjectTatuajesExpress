@@ -50,10 +50,10 @@ app.post('/api/services', auth, isAdmin,createService);
 
 app.post('/api/appointments',auth, appointCreateCita);///
 
-app.put('/api/appointments',auth,updateAppoint);///
+app.put('/api/appointments/:id',auth,updateAppoint);///
 app.get ('/api/appointments',auth, isAdmin,getAppointment);
 
-app.get('/api/appointments/id:',auth, isAdmin,getAllAppointById);//
+app.get('/api/appointments/:id',auth, isAdmin,getAllAppointById);//
 
 
 

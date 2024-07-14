@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "TATUAJES-EXPRESS",
     "collectionId": "c8c33d53-6ded-421a-a455-b4be4f43e697",
-    "dateExported": "2024-07-14T11:51:46.717Z",
+    "dateExported": "2024-07-14T14:08:36.828Z",
     "version": "1.2",
     "folders": [
         {
@@ -51,11 +51,11 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-07-10T17:20:16.303Z",
-            "modified": "2024-07-14T07:57:16.595Z",
+            "modified": "2024-07-14T12:35:00.474Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"email\": \"user@user.com\",\n   \"password\": \"123456789\"\n}",
+                "raw": "{\n  \"email\": \"admin@admin.com\",\n   \"password\": \"123456789\"\n}",
                 "form": []
             }
         },
@@ -68,11 +68,11 @@
             "method": "GET",
             "sortNum": 30000,
             "created": "2024-07-10T17:47:26.785Z",
-            "modified": "2024-07-13T18:45:47.349Z",
+            "modified": "2024-07-14T12:54:27.027Z",
             "headers": [],
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Niwicm9sZSI6MSwiZW1haWwiOiJ0YXRpYW5hQHRhdGlhbmEuY29tIiwiaWF0IjoxNzIwODk2MzI0LCJleHAiOjE3MjA5MDM1MjR9.BWGzDt0NEmtuEkIc3RFsiYHxxb0t_JUv85FYK3wyt7w"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZV9pZCI6MiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3MjA5NjE1OTQsImV4cCI6MTcyMDk2ODc5NH0.qFqpNkcLDuYtG0VjLieX27isx2x8FGBgBMU1Lg1qWNA"
             }
         },
         {
@@ -84,7 +84,7 @@
             "method": "GET",
             "sortNum": 40000,
             "created": "2024-07-10T18:16:14.346Z",
-            "modified": "2024-07-13T18:51:58.996Z",
+            "modified": "2024-07-14T12:55:46.358Z",
             "headers": [],
             "body": {
                 "type": "json",
@@ -93,7 +93,7 @@
             },
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6MywiZW1haWwiOiJzdXBlcmFkbWluQHN1cGVyYWRtaW4uY29tIiwiaWF0IjoxNzIwODk2NjczLCJleHAiOjE3MjA5MDM4NzN9.vL0VeqP6JKsbyRd1zwk_REtN_Cv7PTQT-3DvVDF3iLA"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZV9pZCI6MiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3MjA5NjE1OTQsImV4cCI6MTcyMDk2ODc5NH0.qFqpNkcLDuYtG0VjLieX27isx2x8FGBgBMU1Lg1qWNA"
             }
         },
         {
@@ -105,37 +105,37 @@
             "method": "PUT",
             "sortNum": 50000,
             "created": "2024-07-10T20:03:19.314Z",
-            "modified": "2024-07-13T18:54:49.570Z",
+            "modified": "2024-07-14T12:58:03.182Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"email\":\"userone@userone.com\"\n}",
+                "raw": "{\n  \"email\":\"use23@usero23e.com\"\n}",
                 "form": []
             },
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZSI6MywiZW1haWwiOiJzdXBlcmFkbWluQHN1cGVyYWRtaW4uY29tIiwiaWF0IjoxNzIwODk2NjczLCJleHAiOjE3MjA5MDM4NzN9.vL0VeqP6JKsbyRd1zwk_REtN_Cv7PTQT-3DvVDF3iLA"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZV9pZCI6MiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3MjA5NjE1OTQsImV4cCI6MTcyMDk2ODc5NH0.qFqpNkcLDuYtG0VjLieX27isx2x8FGBgBMU1Lg1qWNA"
             }
         },
         {
             "_id": "d875f450-52e7-40b4-a937-98abea99bbcb",
             "colId": "c8c33d53-6ded-421a-a455-b4be4f43e697",
             "containerId": "681fc99c-0c28-4329-b538-f097a6b73902",
-            "name": "CREATED APPOINTMENT",
-            "url": "http://localhost:4200/api/appointments",
+            "name": "UPDATE APPOINMENT",
+            "url": "http://localhost:4200/api/appointments/5",
             "method": "PUT",
             "sortNum": 60000,
             "created": "2024-07-10T20:48:27.568Z",
-            "modified": "2024-07-14T10:45:03.494Z",
+            "modified": "2024-07-14T14:03:32.141Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\r\n  \r\n \" id\": \"2\",\r\n   \"appointment_date\": \"2024/02/06\"\r\n   \r\n\r\n}\r\n",
+                "raw": "{\n  \n      \n     \"appointment_date\": \"2024-10-17\",\n     \"service_id\": 6\n   \n\n}\n",
                 "form": []
             },
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZV9pZCI6MiwiZW1haWwiOiJ1c2VyQHVzZXIuY29tIiwiaWF0IjoxNzIwOTUyODY3LCJleHAiOjE3MjA5NjAwNjd9.PNXvrKaFdj9qeigeRwP_X-em9so1jY4Ws2fElbMQEB4"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZV9pZCI6MiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3MjA5NjE1OTQsImV4cCI6MTcyMDk2ODc5NH0.qFqpNkcLDuYtG0VjLieX27isx2x8FGBgBMU1Lg1qWNA"
             }
         },
         {
@@ -147,11 +147,11 @@
             "method": "POST",
             "sortNum": 70000,
             "created": "2024-07-11T07:30:02.543Z",
-            "modified": "2024-07-11T07:30:02.543Z",
+            "modified": "2024-07-14T12:35:34.912Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"email\": \"tatiana@tatiana.com\",\n   \"password\": \"123456789\"\n}",
+                "raw": "{\n  \"email\": \"auro@auroa.com\",\n   \"password\": \"123456789\"\n}",
                 "form": []
             }
         },
@@ -164,16 +164,16 @@
             "method": "POST",
             "sortNum": 80000,
             "created": "2024-07-13T19:04:06.913Z",
-            "modified": "2024-07-13T19:58:01.519Z",
+            "modified": "2024-07-14T12:53:49.495Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"user\"\n}",
+                "raw": "{\n  \"role_id\": 1,\n  \"name\": \"useeer\"\n}",
                 "form": []
             },
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZV9pZCI6MiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3MjA5MDA2NDYsImV4cCI6MTcyMDkwNzg0Nn0.Aj8xxueOEJPvFl4VzaWi3fi4c-AU3S3mMfOvY_0ezrI"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZV9pZCI6MiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3MjA5NjE1OTQsImV4cCI6MTcyMDk2ODc5NH0.qFqpNkcLDuYtG0VjLieX27isx2x8FGBgBMU1Lg1qWNA"
             }
         },
         {
@@ -185,53 +185,11 @@
             "method": "GET",
             "sortNum": 90000,
             "created": "2024-07-13T19:10:37.402Z",
-            "modified": "2024-07-13T19:59:59.768Z",
+            "modified": "2024-07-14T12:54:03.056Z",
             "headers": [],
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZV9pZCI6MiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3MjA5MDA2NDYsImV4cCI6MTcyMDkwNzg0Nn0.Aj8xxueOEJPvFl4VzaWi3fi4c-AU3S3mMfOvY_0ezrI"
-            }
-        },
-        {
-            "_id": "8c629dce-31e8-41bb-922a-baeedcfa87b9",
-            "colId": "c8c33d53-6ded-421a-a455-b4be4f43e697",
-            "containerId": "1b76d201-ce2c-4ef9-a472-688b3e08a614",
-            "name": "UPDATE ROLES",
-            "url": "http://localhost:4200/api/roles",
-            "method": "PUT",
-            "sortNum": 100000,
-            "created": "2024-07-13T21:25:38.202Z",
-            "modified": "2024-07-13T21:25:38.202Z",
-            "headers": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"name\": \"1\"\n  \n\n}\n",
-                "form": []
-            },
-            "auth": {
-                "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZV9pZCI6MiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3MjA5MDA2NDYsImV4cCI6MTcyMDkwNzg0Nn0.Aj8xxueOEJPvFl4VzaWi3fi4c-AU3S3mMfOvY_0ezrI"
-            }
-        },
-        {
-            "_id": "771e27cc-7e85-4c58-9fa6-2ca855fe3942",
-            "colId": "c8c33d53-6ded-421a-a455-b4be4f43e697",
-            "containerId": "1b76d201-ce2c-4ef9-a472-688b3e08a614",
-            "name": "DELETE ROLE",
-            "url": "http://localhost:4200/api/roles",
-            "method": "DELETE",
-            "sortNum": 110000,
-            "created": "2024-07-13T21:42:32.202Z",
-            "modified": "2024-07-13T21:42:32.202Z",
-            "headers": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"role_id\":\"2\",\n  \"name\": \"ana\"\n}",
-                "form": []
-            },
-            "auth": {
-                "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZV9pZCI6MiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3MjA5MDA2NDYsImV4cCI6MTcyMDkwNzg0Nn0.Aj8xxueOEJPvFl4VzaWi3fi4c-AU3S3mMfOvY_0ezrI"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZV9pZCI6MiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3MjA5NjE1OTQsImV4cCI6MTcyMDk2ODc5NH0.qFqpNkcLDuYtG0VjLieX27isx2x8FGBgBMU1Lg1qWNA"
             }
         },
         {
@@ -255,70 +213,37 @@
             "method": "POST",
             "sortNum": 130000,
             "created": "2024-07-13T21:51:50.527Z",
-            "modified": "2024-07-13T21:51:50.527Z",
+            "modified": "2024-07-14T12:56:31.077Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "    {\r\n     \"title\": \"perforacion de oreja\",\r\n     \"description\":\"se perfora orejas y nariz\"\r\n    }",
+                "raw": "    {\n     \"title\": \"perforacion de oreja\",\n     \"description\":\"se perfora orejas y nariz\"\n    }",
                 "form": []
             },
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZV9pZCI6MywiZW1haWwiOiJ1c2Vyb25lQHVzZXJvbmUuY29tIiwiaWF0IjoxNzIwOTA3NDI4LCJleHAiOjE3MjA5MTQ2Mjh9.-bu1baKRsS7gmpsfa-tCLgNGJytMcgM_mDlGF6Cb3_s"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZV9pZCI6MiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3MjA5NjE1OTQsImV4cCI6MTcyMDk2ODc5NH0.qFqpNkcLDuYtG0VjLieX27isx2x8FGBgBMU1Lg1qWNA"
             }
-        },
-        {
-            "_id": "8c3d1902-5e34-4f71-a94e-67420636c787",
-            "colId": "c8c33d53-6ded-421a-a455-b4be4f43e697",
-            "containerId": "f182deec-2aa2-4b40-b9f9-cc488190e07f",
-            "name": "DELETE SERVICE",
-            "url": "http://localhost:4200/api/services/",
-            "method": "DELETE",
-            "sortNum": 140000,
-            "created": "2024-07-13T21:57:14.487Z",
-            "modified": "2024-07-13T21:57:14.487Z",
-            "headers": [],
-            "body": {
-                "type": "json",
-                "raw": "    {\r\n     \"title\": \"perforacion de oreja\",\r\n     \"description\":\"se perfora orejas y nariz\"\r\n    }",
-                "form": []
-            },
-            "auth": {
-                "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZV9pZCI6MywiZW1haWwiOiJ1c2Vyb25lQHVzZXJvbmUuY29tIiwiaWF0IjoxNzIwOTA3NDI4LCJleHAiOjE3MjA5MTQ2Mjh9.-bu1baKRsS7gmpsfa-tCLgNGJytMcgM_mDlGF6Cb3_s"
-            }
-        },
-        {
-            "_id": "39dbaba0-6816-4760-abbd-9ebed1b3b21b",
-            "colId": "c8c33d53-6ded-421a-a455-b4be4f43e697",
-            "containerId": "f182deec-2aa2-4b40-b9f9-cc488190e07f",
-            "name": "UPDATE SERVICE",
-            "url": "http://localhost:4200/api/services/6",
-            "method": "PUT",
-            "sortNum": 150000,
-            "created": "2024-07-13T21:58:10.166Z",
-            "modified": "2024-07-13T21:58:10.166Z",
-            "headers": []
         },
         {
             "_id": "c7a1a2f1-7869-42fd-b804-2b591fc34e5d",
             "colId": "c8c33d53-6ded-421a-a455-b4be4f43e697",
             "containerId": "681fc99c-0c28-4329-b538-f097a6b73902",
             "name": "CREATE APPOINTMENT",
-            "url": "http://localhost:4200/api/appointments",
+            "url": "http://localhost:4200/api/appointments/1",
             "method": "POST",
             "sortNum": 160000,
             "created": "2024-07-13T22:11:59.576Z",
-            "modified": "2024-07-13T22:11:59.576Z",
+            "modified": "2024-07-14T14:01:10.428Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "    {\r\n     \"appointment_date\": \"2024-01-17\",\r\n     \"service_id\": \"6\"\r\n    }",
+                "raw": "    {\n      \"user_id\": 6,\n     \"appointment_date\": \"2024-01-17\",\n     \"service_id\": 6\n    }",
                 "form": []
             },
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZV9pZCI6MywiZW1haWwiOiJ1c2Vyb25lQHVzZXJvbmUuY29tIiwiaWF0IjoxNzIwOTA3NDI4LCJleHAiOjE3MjA5MTQ2Mjh9.-bu1baKRsS7gmpsfa-tCLgNGJytMcgM_mDlGF6Cb3_s"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZV9pZCI6MiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3MjA5NjE1OTQsImV4cCI6MTcyMDk2ODc5NH0.qFqpNkcLDuYtG0VjLieX27isx2x8FGBgBMU1Lg1qWNA"
             }
         },
         {
@@ -327,19 +252,19 @@
             "containerId": "681fc99c-0c28-4329-b538-f097a6b73902",
             "name": "UPDATE APPOINTMENT",
             "url": "http://localhost:4200/api/appointments",
-            "method": "POST",
+            "method": "GET",
             "sortNum": 170000,
             "created": "2024-07-13T22:16:08.848Z",
-            "modified": "2024-07-13T22:16:08.848Z",
+            "modified": "2024-07-14T14:05:27.244Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "    {\r\n     \"appointment_date\": \"2024-01-17\",\r\n     \"service_id\": \"6\"\r\n    }",
+                "raw": "    {\n     \"appointment_date\": \"2024-01-17\",\n     \"service_id\": \"6\"\n    }",
                 "form": []
             },
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Mywicm9sZV9pZCI6MywiZW1haWwiOiJ1c2Vyb25lQHVzZXJvbmUuY29tIiwiaWF0IjoxNzIwOTA3NDI4LCJleHAiOjE3MjA5MTQ2Mjh9.-bu1baKRsS7gmpsfa-tCLgNGJytMcgM_mDlGF6Cb3_s"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZV9pZCI6MiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3MjA5NjE1OTQsImV4cCI6MTcyMDk2ODc5NH0.qFqpNkcLDuYtG0VjLieX27isx2x8FGBgBMU1Lg1qWNA"
             }
         },
         {
@@ -347,17 +272,17 @@
             "colId": "c8c33d53-6ded-421a-a455-b4be4f43e697",
             "containerId": "681fc99c-0c28-4329-b538-f097a6b73902",
             "name": "GET ALL APPOINTMENT",
-            "url": "http://localhost:4200/api/appointments",
+            "url": "http://localhost:4200/api/appointments/5",
             "method": "GET",
             "sortNum": 180000,
             "created": "2024-07-13T22:21:12.192Z",
-            "modified": "2024-07-13T22:21:12.192Z",
+            "modified": "2024-07-14T14:06:03.919Z",
             "headers": [],
             "auth": {
                 "type": "bearer",
-                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZV9pZCI6MiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3MjA5MDkxNDYsImV4cCI6MTcyMDkxNjM0Nn0.rFcB5USmmlBUHTni2mehCmgpViTaaniCWX8fdDRHGjc"
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZV9pZCI6MiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJpYXQiOjE3MjA5NjE1OTQsImV4cCI6MTcyMDk2ODc5NH0.qFqpNkcLDuYtG0VjLieX27isx2x8FGBgBMU1Lg1qWNA"
             }
         }
     ],
-    "ref": "qVvAWjvECHmQQOAFkIfNyUEoZ6bZf2Bl9oe8tANK6KTcWpPraUOes80JzGc0i0LKZp3VyYf1zLVeUjZt4WUWMA"
+    "ref": "qVvAWjvECHmQQOAFkIfNyZ21nms59Ij6MOY3Da72TfBnO81w_4wp9JDpC1CZZG7O0dUzmgdrUnR5BJEAHDSQZA"
 }
