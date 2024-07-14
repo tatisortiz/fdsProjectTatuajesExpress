@@ -5,16 +5,15 @@
 
 ## Table of Contents 📝
 - [About the Project 📁](#about-the-project-📁)
-- [ER Diagram from SQL 📊](#er-diagram-from-sql-📊)
+- [ER Diagram from SQL 📋](#er-diagram-from-sql-📋)
 - [Local Installation Option ⚙️](#local-installation-option-⚙️)
-- [Endpoints ⚒](#endpoints-⚒)
 - [Stack](#stack)
-- [Future Functionalities ✅](#future-functionalities-✅)
-- [Contribution 📦](#contribution-📦)
-- [Development 📌](#development-📌)
+- [Endpoints ⚙️](#endpoints-⚙️)
+- [Future Functionalities 👨🏻‍💻](#future-functionalities-👨🏻‍💻)
+- [Development 🌐](#development-🌐)
 -  [Deploy 🚀](#deploy-🚀)
-- [Appreciation 📍](#appreciation-📍)
-- 
+- [Author ✒️](#author-✒️)
+- [Thanks 🎓](#thanks-🎓)
 
 ## About the Project 📁
 This project consists of the management of appointments for a tattoo studio which contains the creation of an application in which users can register, log in and access their personal area. Within your area, you will be able to view a list of scheduled appointments for tattoo and piercing services, as well as create new appointments for various services offered by the studio.
@@ -287,7 +286,7 @@ Tecnologías utilizadas para el proyecto:
 
 - ROLES
 
-  - SEE ALL ROLES (only for admins!)
+  - SEE ALL ROLES ( isadmin)
 
             GET http://localhost:4000/api/roles
 
@@ -296,8 +295,8 @@ Tecnologías utilizadas para el proyecto:
         your token
         ```
 
-  - CREATE ROLE (only for admins)
-    POST http://localhost:4000/api/roles/create
+  - CREATE ROLE (isadmin)
+    POST http://localhost:4000/api/roles
 
         auth:
         ```
@@ -306,12 +305,12 @@ Tecnologías utilizadas para el proyecto:
         body:
         ``` js
             {
-                "id": 1,
-                "name": "hokage"
+                "id": 3,
+                "name": "caro"
             }
         ```
 
-    - UPDATE ROLE (only for admins)
+    - UPDATE ROLE (isadmin)
 
             PUT http://localhost:4000/api/roles/update/:id
 
@@ -326,11 +325,11 @@ Tecnologías utilizadas para el proyecto:
       ```js
           {
               "id": 2,
-              "infotoupdate": "blablabla"
+              "infupdate": "blablabla"
           }
       ```
 
-    - DELETE ROLE
+    - DELETE ROLE (isAdmin)
 
            DELETE http://localhost:4000/api/roles/delete
 
@@ -350,4 +349,21 @@ Tecnologías utilizadas para el proyecto:
 
   </details>
  
+
+ ## Future functionalities 👨🏻‍💻
+- option to select a tattoo artist.
+- Add tattoo artist table.
+
+## Development 🌐
+
  ## Deploy 🚀
+Deploy via Zeabur: [https://tattoexpressfd.zeabur.app/](https://tattoexpressfd.zeabur.app/) <br>
+
+## Author ✒️
+
+- Tatiana ortiz
+
+
+## Thanks 🎓
+
+Many thanks to the Geekshubs Academy for the opportunity to learn and grow as a developer, every day you get better.
