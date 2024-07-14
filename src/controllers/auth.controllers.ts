@@ -37,11 +37,11 @@ export const authRegister = async (req: Request, res: Response,) => {
     // Responder
     res.status(201).json({
       success: true,
-      message: "tatiaan la mejor",
+      message: "user register",
       data: newUser,
     });
 
-    console.log('ttauiuus')
+    
 
   } catch (error) {
     res.status(500).json({

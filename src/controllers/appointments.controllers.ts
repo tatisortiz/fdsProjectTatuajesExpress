@@ -4,7 +4,7 @@ import { Appointments } from "../database/models/Appointments";
 
 export const appointCreateCita= async (req: Request , res: Response) => {
     try {
-    const appointId = req.body.appointId
+    const  appointId = req.body. appointment_date;
     const userId = req.tokenData.id;
     const serviceId = req.body.service_id;
 
@@ -16,15 +16,15 @@ export const appointCreateCita= async (req: Request , res: Response) => {
             }
         )
     }
-    const newAppoint = await appointId.create(
+    const newAppoint = await Appointments.create(
         {
-            appointId: appointId,
-            userId: userId,
-            serviceId: serviceId
+            appointment_date: appointId,
+            user_id: userId,
+            service_id: serviceId
         }
     ).save();
 
-    //4. Give a response to the page
+    
     res.status(201).json(
         {
             success: true,

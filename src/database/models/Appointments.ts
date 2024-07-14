@@ -7,6 +7,8 @@ export class Appointments extends BaseEntity {
     @PrimaryGeneratedColumn()
     id!: number
 
+    @Column({ name: 'date' })
+    date!: Date
     
      @Column({ name: "appointment_date"})
      appointment_date!: Date
