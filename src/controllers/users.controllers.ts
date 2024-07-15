@@ -3,7 +3,7 @@ import { User } from "../database/models/User";
 
 export const getAllUsers= async (req: Request, res: Response) =>{
   try {
-    
+    console.log(1)
     const user = await User.find(
       {
         select: {
@@ -11,7 +11,7 @@ export const getAllUsers= async (req: Request, res: Response) =>{
         }
     }
     )
-
+  console.log(user)
     res.json(
       {
         success: true,
@@ -19,9 +19,10 @@ export const getAllUsers= async (req: Request, res: Response) =>{
         data : user
       }
     )
-
+ console.log(3)
     
   } catch (error) {
+    console.log(4)
     res.status(500).json(
       {
         success: false,

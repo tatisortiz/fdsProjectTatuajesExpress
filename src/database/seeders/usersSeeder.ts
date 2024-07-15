@@ -36,7 +36,7 @@ export const usersSeeder = async () => {
         const userOne = new User();
         userOne.id = 4;
         userOne.name = "jose";
-        userOne.email = "userone@userone.com";
+        userOne.email = "jose@jose.com";
         userOne.password = bcrypt.hashSync("123456789", 10);
         userOne.role_Id = 2;
         await userOne.save();  

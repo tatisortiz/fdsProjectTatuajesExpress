@@ -2,9 +2,9 @@ import { NextFunction, Request, Response } from "express";
 
 export const isSuperAdmin = async (req: Request, res: Response, next: NextFunction) => {
     try {
-
+      console.log(req.tokenData)
         if (req.tokenData.role_id !== 3) {
-            res.json(
+           return res.json(
                 {
                     success: false,
                     message: 'you are not allowed'

@@ -17,17 +17,9 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 4200
 
-
 ////////////Authentication///////
 app.post('/api/auth/register', authRegister);
 app.post('/api/auth/login', authLogin);
-
-
-////////////ROLES//////////
-app.post('/api/roles',auth,isAdmin, createRole);
-app.get('/api/roles',auth, isAdmin, getAllRole);
-
-
 
 /////////Users////////////////777
 app.get("/api/users", auth, isSuperAdmin, getAllUsers);
@@ -42,10 +34,6 @@ app.get('/api/services',getAllService);
 app.post('/api/services', auth, isAdmin,createService);
 
 
-
-
-
-
 ////// CITAS///////
 
 app.post('/api/appointments',auth, appointCreateCita);///
@@ -54,6 +42,10 @@ app.get ('/api/appointments',auth, isAdmin,getAppointment);
 app.get('/api/appointments/:id',auth, isAdmin,getAllAppointById);//
 
 
+
+////////////ROLES//////////
+app.post('/api/roles',auth,isSuperAdmin, createRole);
+app.get('/api/roles',auth, isSuperAdmin, getAllRole);
 
 
 
