@@ -30,7 +30,7 @@ This project consists of the management of appointments for a tattoo studio whic
 4. `$ Execute the migrations`
 5. `$ Execute the seeders`
 6. `$ npm run dev` to run our server
-7. ...
+
 
 ## Stack
 Tecnologías utilizadas para el proyecto:
