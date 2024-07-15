@@ -242,43 +242,7 @@ Tecnologías utilizadas para el proyecto:
       your token
       ```
 
-    - UPDATE SERVICE ( admin)
-
-            PUT http://localhost:4000/api/services/:id
-
-      auth:
-
-      ```
-      your token
-      ```
-
-      body:
-
-      ```js
-          {
-              "id": 3,
-              "description": "atto tatto"
-          }
-      ```
-
-    - DELETE SERVICE BY ID
-
-           GET http://localhost:4000/api/services/:id
-
-      auth:
-
-      ```
-      your token
-      ```
-
-      body:
-
-      ```js
-          {
-              "id": 3
-          }
-      ```
-
+    
   </details>
 
 <details>
