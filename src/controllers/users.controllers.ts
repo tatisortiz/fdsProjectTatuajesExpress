@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { User } from "../database/models/User";
+import bcrypt from "bcrypt"
 
 export const getAllUsers= async (req: Request, res: Response) =>{
   try {
@@ -71,19 +72,34 @@ export const getProfileUsers= async (req: Request , res: Response) => {
 export const updateUsers= async(req: Request , res: Response) => {
    try {
     const userId = req.tokenData.id
-     const body = req.body;
-
-    if(!body) {
-      return res.status(404).json({
-      success: false,
-      message:"error update user",
-      })
+    const {name, email, password} = req.body
+    let newpassword
+   
+    if (password.length < 8 || password.length > 12) {
+      return res.status(400).json({
+        success: false,
+        message: "Password is not valid, 8 to 12 characters must be needed",
+      });
     }
 
-    const userUpdate = await User.update(
+    if(password) {
+     newpassword =  bcrypt.hashSync(password, 10);
+    }
+    
+  
+
+
+  const userUpdate = await User.update(
       {
-        id:userId
-      },body
+        id: userId
+      },
+      
+      {
+        name: name,
+        email: email,
+       password: newpassword
+
+      },
     )
      
     res.status(201).json(
@@ -96,11 +112,11 @@ export const updateUsers= async(req: Request , res: Response) => {
     
    
     
-   } catch (error) {
+   } catch (error: any) {
     res.status(500).json({
       success:false,
       message:"user cannot be modified",
-      error: error
+      error: error.message
     })
     
    }
