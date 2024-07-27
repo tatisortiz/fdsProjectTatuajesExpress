@@ -4,10 +4,6 @@ import { TokenDecoded } from "../types";
 
 export const auth = (req: Request, res: Response, next: NextFunction) => {
    try {
-    
-    console.log('middleware authentication');
-
-    console.log(req.headers.authorization);
 
     if(!req.headers.authorization) {
         return res.status(401).json(

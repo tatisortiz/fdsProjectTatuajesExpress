@@ -180,14 +180,37 @@ export const getAppointment= async(req:Request , res: Response) => {
     )
 
     
- } catch (error) {
+ } catch (error: any) {
     res.status(500).json(
         {
             success: false,
             message:"Error retrieving appointment",
-            error: error
+            error: error.message
         }
     )
     
  }
 }
+export const deleteAppointmentById = async (req: Request, res: Response) => {
+    try {
+      const apptIdToDelete = Number(req.params.id);
+  
+      const apptDeleted = await Appointments.delete(apptIdToDelete);
+  
+      if (!apptDeleted.affected) {
+        throw new Error("Appointment not foudn");
+      }
+  
+      return res.status(200).json({
+        success: true,
+        message: "Appointment deleted successfully",
+        data: apptDeleted,
+      });
+    } catch (error) {
+      res.status(500).json({
+        success: false,
+        message: "Error trying to delete appointment",
+        error: error,
+      });
+    }
+  };
