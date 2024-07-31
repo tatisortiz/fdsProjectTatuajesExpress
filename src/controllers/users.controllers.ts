@@ -8,7 +8,7 @@ export const getAllUsers = async (req: Request, res: Response) => {
     const user = await User.find(
       {
         select: {
-
+          id: true,
           email: true,
 
         }
@@ -44,6 +44,7 @@ export const getProfileUsers = async (req: Request, res: Response) => {
     const users = await User.findOne(
       {
         select: {
+          id:true,
           name: true,
           email: true,
           created_at: true,
